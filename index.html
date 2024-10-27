@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOONLIGHT MUSIC SCHOOL</title>
-    <link rel="stylesheet" href="css/design.css"> 
+    <title>Multi-Tab Example</title>
+    <link rel="stylesheet" href="css/design.css">
 </head>
 <body>
-    <header>
-        <h1>MOONLIGHT MUSIC SCHOOL</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#lessons">Lessons</a></li>
-                <li><a href="#aboutUs">About US</a></li>
-                <li><a href="#policiesAndProcedures">Policies and Procedures</a></li>
-                <li><a href="#contactUs">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
+            <button class="tab-button" onclick="openTab(event, 'lessons')">Lessons</button>
+            <button class="tab-button" onclick="openTab(event, 'aboutUs')">About Us</button>
+            <button class="tab-button" onclick="openTab(event, 'policiesAndProcedures')">Policies and Procedures</button>
+            <button class="tab-button" onclick="openTab(event, 'contactUs')">Contact Us</button>
+        </div>
 
-    <main>
-       
+        <div class="tab-content active" id="home">
+            <h2>Tab 1 Content</h2>
+            <p>This is the content for Tab 1.</p>
+        </div>
         
-    </main>
+        <div class="tab-content" id="lessons">
+            <h2>Tab 2 Content</h2>
+            <p>This is the content for Tab 2.</p>
+        </div>
+        
+        <div class="tab-content" id="aboutUs">
+            <h2>Tab 3 Content</h2>
+            <p>This is the content for Tab 3.</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 MOONLIGHT MUSIC SCHOOL. All rights reserved.</p>
-    </footer>
+        <div class="tab-content" id="policiesAndProcedures">
+            <h2>Tab 3 Content</h2>
+            <p>This is the content for Tab 3.</p>
+        </div>
+
+        <div class="tab-content" id="contactUs">
+            <h2>Tab 3 Content</h2>
+            <p>This is the content for Tab 3.</p>
+        </div>
+    </div>
+    
+    <script src="js/functions.js"></script>
 </body>
 </html>
