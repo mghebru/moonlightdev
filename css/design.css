@@ -1,1 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
 
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab-button {
+    flex: 1; /* Take equal space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #ccc;
+}
+
+.tab-content {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.tab-content.active {
+    display: block; /* Show active tab */
+}
