@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Testimonial</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			width: 100%;
+			min-height: 100vh;
+			background-color: #fcfcfc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			position: relative;
+			width: 100%;
+			min-height: 450px;
+			background-color: #f5f5f5;
+		}
+		.container .contents-wraper{
+			width: 70%;
+			min-height: inherit;
+			margin: 30px auto;
+			text-align: center;
+		}
+		.contents-wraper .header h1{
+			position: relative;
+			font-size: 40px;
+			text-transform: uppercase;
+			font-weight: 500;
+			text-align: center;
+			letter-spacing: 1px;
+		}
+		.contents-wraper .testRow{
+			width: 100%;
+			min-height: inherit;
+			position: relative;
+			overflow: hidden;
+		}
+		.testRow .testItem{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.testRow .testItem:not(.active){
+			top: 0;
+			left: -100%;
+		}
+		.testRow .testItem img{
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 5px;
+			outline: 2px solid #006994;
+			outline-offset: 2px;
+		}
+		.testRow .testItem h3{
+			font-size: 30px;
+			font-style: italic;
+			padding: 7px;
+		}
+		.testRow .testItem h4{
+			font-style: italic;
+		}
+		.testRow .testItem p{
+			font-size: 18px;
+			letter-spacing: 1px;
+			line-height: 1.2;
+			padding: 10px;
+		}
+		.contents-wraper .indicators{
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 5px;
+			cursor: pointer;
+		}
+		.contents-wraper .indicators .dot{
+			width: 15px;
+			height: 15px;
+			margin: 0px 3px;
+			border: 3px solid #aaa;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.5s ease;
+		}
+		.contents-wraper .indicators .active{
+			background-color: #006994;
+		}
+		@keyframes next1{
+			from{
+				left: 0%;
+			}
+			to{
+				left: -100%;
+			}
+		}
+		@keyframes next2{
+			from{
+				left: 100%;
+			}
+			to{
+				left: 0%;
+			}
+		}
+
+		@keyframes prev1{
+			from{
+				left: 0%;
+			}
+			to{
+				left: 100%;
+			}
+		}
+		@keyframes prev2{
+			from{
+				left: -100%;
+			}
+			to{
+				left: 0%;
+			}
+		}
+
+		@media(max-width: 550px){
+			.container .contents-wraper{
+				width: 90%;
+			}
+			.contents-wraper .header h1{
+				font-size: 32px;
+			}
+			.testRow .testItem h3{
+				font-size: 26px;
+			}
+			.testRow .testItem p{
+				font-size: 16px;
+				letter-spacing: initial;
+				line-height: initial;
+			}
+
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="contents-wraper">
+
+		<section class="testRow">
+			
+			<div class="testItem active">
+				<p>My 12 year old daughter began lessons at Moonlight Music School in July of 2023. 
+                    She was immediately welcomed with kindness and patience. In a short time, she’s learned
+                    how to play the piano with no prior knowledge or experience in playing music. Her teacher,
+                    Ms. Anna is very patient and thoughtful in her musical teaching skills. In just a few months, 
+                    my daughter had the confidence to play in the recital. She truly finds joy in playing the piano and 
+                    I believe that the teachers and overall experience at Moonlight Music School has played an integral role
+                    in her growing passion. I would highly recommend to new or existing musical students regardless of age
+                    or prior musical skills. They are also very flexible with lesson times. Thank you, Moonlight Music School!</p>
+                    <p class="name">Jillian S</p>
+			</div>
+
+			<div class="testItem">
+				<p>My daughter has been taking piano lessons at Moonlight Music School for several months. Her teacher, Anna, is 
+					really passionate, patient, and professional. My daughter enjoys going to music class. I also really appreciate
+					how flexible they have been with scheduling the classes. I highly recommend taking music lessons at Moonlight.</p>
+				<p class="name">Ivy Michelli</p>
+			</div>
+
+			<div class="testItem">
+				<p>My daughter started piano lessons this year and has had the best experience! Yekaterina provides the perfect 
+					combination of fun and structure. You can really tell that she cares about my daughter’s progress and takes 
+					additional time when needed if a concept is not understood. Highly recommend!</p>
+				<p class="name">Harmony Smith</p>
+			</div>
+
+			<div class="testItem">
+				<p>I am an adult beginner taking piano lessons with Olena. She is a great teacher! She is very talented as a musician 
+					and teacher. I have progressed faster than I expected by taking lessons with her.</p>
+				<p class="name">Harmony Law</p>
+			</div>
+
+			<div class="testItem">
+				<p>Yekaterina is amazing! My son has been playing the piano under her teaching for the past few years. He has taken lessons 
+					both at her studio and at home. We are continuously impressed at the skills he gains each week and also the confidence he 
+					has gained over the years to perform in front of an audience. We would highly recommend Moonlight Music School to anyone 
+					looking for a new music class.</p>
+				<p class="name">Jennifer McIntyre</p>
+			</div>
+
+			<div class="testItem">
+				<p>My son started classes a few months ago for the first time and I've seen improvement in his performance.
+					Before, he was home trying to teach himself. Ms. Anna is a great teacher who is patient and encouraging.
+					It's great to watch her teach my son and to see his confidence grow. One of the best decisions I've made this year.</p>
+				<p class="name">Nadia Grey-Kelly</p>
+			</div>
+
+			<div class="testItem">
+				<p>I couldn’t be happier with my daughter’s piano and voice teacher, Ms Anna. It has been a year now since my daughter started her 
+					piano and then voice lessons at this location and Ms Anna has been incredibly patient and has made a world of difference in helping 
+					my daughter grow her love for music.</p>
+				<p class="name">Melrose W</p>
+			</div>
+
+			<div class="testItem">
+				<p>My son started piano lessons in January 2023 with Miss Katya. She is a wonderful teacher, and he has learned so much in such a short time. 
+					He looks forward to his lesson every week. I would highly recommend this music school to anyone looking to take piano lessons.</p>
+				<p class="name">Tessa Lewis</p>
+			</div>
+
+			<div class="testItem">
+				<p>Love this school. My daughter started from the very beginning and has accomplished a lot for only six months with Katya. Katya is her first 
+					piano teacher and I didn’t know what to expect but everything turned great! My daughter enjoys every lesson.</p>
+				<p class="name">Yana Dribnokhod</p>
+			</div>
+
+			<div class="testItem">
+				<p>I've been taking my young son there for almost a year now. Ms. Katya is a fantastic teacher with great patience for new, young learners. 
+                    Her teaching style is more about learning basic skills, finger positions, and music reading comprehension through songs instead of rote memorization 
+                    of scales. These sessions have upped his confidence behind the keys enough to perform in a recital recently. Highly recommended to anyone.</p>
+                    <p class="name">Benjamin Pulley</p>
+			</div>
+
+			<div class="testItem">
+				<p>Yekaterina is cool, patient and very professional. She is currently teaching my three boys and they love her, but mainly, listen to her. My sons play a mix of 
+                    Classical and Standard pieces and actually enjoy it. They have advanced so much. I can't imagine a better fit for our family. Thank You!</p>
+                    <p class="name">Anna Yakovlevna</p>
+			</div>
+
+		</section>
+
+		<section class="indicators">
+			<div class="dot active" attr='0' onclick="switchTest(this)"></div>
+			<div class="dot" attr='1' onclick="switchTest(this)"></div>
+			<div class="dot" attr='2' onclick="switchTest(this)"></div>
+			<div class="dot" attr='3' onclick="switchTest(this)"></div>
+			<div class="dot" attr='4' onclick="switchTest(this)"></div>
+            <div class="dot" attr='5' onclick="switchTest(this)"></div>
+            <div class="dot" attr='6' onclick="switchTest(this)"></div>
+            <div class="dot" attr='7' onclick="switchTest(this)"></div>
+            <div class="dot" attr='8' onclick="switchTest(this)"></div>
+            <div class="dot" attr='9' onclick="switchTest(this)"></div>
+            <div class="dot" attr='10' onclick="switchTest(this)"></div>
+		</section>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	// Access the testimonials
+	let testSlide = document.querySelectorAll('.testItem');
+	// Access the indicators
+	let dots = document.querySelectorAll('.dot');
+
+	var counter = 0;
+
+	// Add click event to the indicators
+	function switchTest(currentTest){
+		currentTest.classList.add('active');
+		var testId = currentTest.getAttribute('attr');
+		if(testId > counter){
+			testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+			counter = testId;
+			testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+		}
+		else if(testId == counter){return;}
+		else{
+			testSlide[counter].style.animation = 'prev1 0.5s ease-in forwards';
+			counter = testId;
+			testSlide[counter].style.animation = 'prev2 0.5s ease-in forwards';
+		}
+		indicators();
+	}
+
+	// Add and remove active class from the indicators
+	function indicators(){
+		for(i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[counter].className += ' active';
+	}
+
+	// Code for auto sliding
+	function slideNext(){
+		testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+		if(counter >= testSlide.length - 1){
+			counter = 0;
+		}
+		else{
+			counter++;
+		}
+		testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+		indicators();
+	}
+	function autoSliding(){
+		deleteInterval = setInterval(timer, 2000);
+		function timer(){
+			slideNext();
+			indicators();
+		}
+	}
+	autoSliding();
+
+	// Stop auto sliding when mouse is over the indicators
+	const container = document.querySelector('.indicators');
+	container.addEventListener('mouseover', pause);
+	function pause(){
+		clearInterval(deleteInterval);
+	}
+
+	// Resume sliding when mouse is out of the indicators
+	container.addEventListener('mouseout', autoSliding);
+
+</script>
+</body>
+</html>
