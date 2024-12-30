@@ -1,0 +1,39 @@
+.li, a, button {
+    font-weight: 500;
+    text-decoration: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.logo {
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 70px 20px;
+    width: 100%;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+.nav-links li a:hover {
+    color: rgb(237, 234, 66);
+}
+.moonbutton img {
+    width: 100%;
+}
+.moonbutton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
