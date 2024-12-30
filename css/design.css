@@ -1,35 +1,564 @@
-body {
-    font-family: Arial, sans-serif;
+/*homepage styling*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.container {
-    width: 80%;
-    margin: auto;
+.navbar-container .moonbutton img {
+    display: none;
 }
-
-.tabs {
-    display: flex;
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
-
-.tab-button {
-    flex: 1; /* Take equal space */
+.heropic{
+    width: 100%;
+}
+.hero-text {
+    position: absolute;
+    top: 5%;  /* Position the overlay at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    width: 100%;
+    max-height: 40%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.hero-text h1 {
+    color: rgb(255, 255, 255);
+    font-size: 6.5vw;
+    font-family: "Amita", serif;
+    font-weight: 600;
+}
+.hero-text p {
+    color: rgb(254, 250, 250);
+    background-color: rgba(7, 6, 6, 0.356); /* Semi-transparent background */
     padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 4vw;
+    font-size: 2vw;
+    font-family:"Forum", serif;
+    letter-spacing: 1px;
+    width: 100%;
+    font-weight: bold;
+}
+.firstLesson {
+    padding: 10px 20px;
+    background-color: #e2d842;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.firstLesson:hover {
+    background-color: #e3ddb5;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    border: 2.5px solid rgba(244, 224, 48, 0.911);   
+}
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+.gallery img:hover {
+    opacity: 0.5;
+}
+.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Forum';
+}
+.responsive {
+    padding: 0 20px;
+    align-items: center;
+    float: left;
+    width: 25%;
+}
+.desc p {
+  color: rgb(1, 0, 0);
+  font-family: 'Forum';
+  text-align: justify; 
+  font-size: 1.5vw; /* Justify the text to align both left and right edges */
+  margin-bottom: 0;            /* Remove any default margins */
+  padding: 0;           /* Remove any default padding */
+  text-indent: 0;
+
+}
+@media only screen and (max-width: 100px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+    .moonbutton img {
+        width: 40px;  /* Smaller size on tablets */
+    }
+    .moonbutton img {
+        width: 30px;  /* Even smaller on mobile */
+    }
+}
+.secondesc p {
+    margin-top: 60vw;
+    font-size: 1.6vw;
+    margin-bottom: 0;            /* Remove any default margins */
+    padding: 10vw;           /* Remove any default padding */
+    text-indent: 0;
+    text-align: justify;
+    letter-spacing: 2px;
+    font-family: 'Forum';
+    
+}
+
+/*lessons page styling*/
+.lessonsHeader h1 {
+    font-family: 'Forum';
+    text-align: center;
+}
+.lessonsHeader p {
+    font-family: 'Forum';
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+}
+.lessonstabs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+}
+.lessonstab-links {
+    display: flex;
+    justify-content: space-between; 
+    width: 70%;
+    padding: 0;
+    margin: 0;
+}
+.tab {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    background-color: #6da8e0f6;
+    font-size: 1.5vw;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.tab:hover {
+    background-color: #e4ec6867;
+}
+/* Active tab */
+.tab.active {
+    background-color: #021d3a;
+    color: rgb(251, 251, 249);
+}
+/* Tab content */
+.tab-content {
+    padding: 30px 16px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: -1;
+    color: #050000;
+    border: 2px solid rgb(11, 0, 0);
+    width: 70%;
+}
+/*tabs title*/
+#tab2content h2, #tab5content h2, #tab3content h2, #tab4content h2 {
+    text-align: center;
+    font-family: 'Forum';
+    font-size: 35px;
+}
+/* Style for the first image and text pair */
+.image2, .image4 {
+    display: flex;
+    flex-direction: row; /* Image on the left, text on the right */
+    align-items: center; /* Vertically center the text with the image */
+    gap: 60px;
+}
+/* Style for the second image and text pair */
+.image3, .image5 {
+    display: flex;
+    flex-direction: row-reverse; /* Image on the right, text on the left */
+    align-items: center; /* Vertically center the text with the image */
+    gap: 60px;
+}
+.pianokid1 {
+    width: 35%;
+    height: auto;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 30px;
+}
+.instrument_desc, .instrument_desc2 {
+    font-family: 'Forum';
+    width: 50%;
+    text-align: justify; /* Justify the text to align both left and right edges */
+    margin: 0;            /* Remove any default margins */
+    padding: 0;           /* Remove any default padding */
+    text-indent: 0;
+}
+#tab2content img {
+    width: 35%;
+}
+/*tab3 images*/
+#tab3content img {
+    width: 35%;
+    padding-top: 10px;
+}
+/*tab4 images*/
+#tab4content img {
+    width: 35%;
+    padding-top: 30px;
+}
+/*tab5 images*/
+.flutekid1, img {
+    width: 35%;
+    padding-top: 30px;
+}
+
+
+/*about us page styling*/
+.aboutUsMain h1 {
+    text-align: center;
+    font-family: 'Forum';
+    margin-bottom: 10px;
+}
+.profile-row {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 30px;
+    width: 70%;
+    margin: 15px auto;
+}
+/*card layout*/
+.infoCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Forum';
+    border-radius: 8px;
+    margin: 0 auto;
+    height: 100%;
+}
+.infoCard .container {
+    flex: 1; /* Ensures the text container takes up remaining space */
+}
+.profile-image {
+    width: 50%; /* Image size */
+    height: auto;
+    padding: 5px;
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.nameTag {
+    text-align: center;
+    font-size: 13px;
+}
+.nameTag p {
+    font-size: 15px;
+}
+.specialeffect {
+    border: 1px solid black;
+    border-radius: 10px;
+    opacity: 0;
+    position: relative;
+    padding: 10px;
+    animation: fadeIn 5s ease-out forwards;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0; /* Text is invisible */
+    }
+    100% {
+      transform: translateX(0);/* Final position is next to the image */
+      opacity: 1; /* Text is fully visible */
+    }
+  }
+
+
+/*policies page styling*/
+.policies {
+    max-width: 800px;
+    margin: 0 auto; /*center container*/
+    padding: 20px;
+}
+.policies h1 {
+    font-family: 'Forum';
+    text-align: center;
+    margin-bottom: 20px;
+}
+.policy-item{
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.policy-item:nth-child(2n) {
+    margin-right: 0;
+}
+.policy-item p {
+    font-family: 'Forum';
+    font-size: 20px;
+   
+    padding: 20px;
+    margin: 0;
+    border-radius: 9px;
+    
+}
+
+/*contact us page styling*/
+.contactheader {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Forum';
+}
+.contactheader p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+.ourContactInfocontainer {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1.3px;
+    margin: 0 auto;
+}
+.info-item, .info-itemaddress {
+    gap: 25px;
+    width: 100%;
+    font-family: 'Forum';
+    display: flex;
+    justify-content: center;
+}
+.info-item h2 {
+    color: rgb(9, 61, 121);
+    font-family: 'Forum', serif;
+    font-weight: normal;
+    margin-top: 30px;
+    text-align: center;
+}
+.info-itemaddress h3 {
+    color: rgb(9, 61, 121);
+    font-family: 'Forum';
+    font-weight: 80;
+    font-size: 25px;
+    margin-top: 20px;
+    gap: 100px;
+}
+.info-item p, .info-itemaddress p {
+    color: rgb(2, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    margin-top: 13px;
+    align-items: left;
+    justify-content: left;
+}
+.fa {
+    padding: 13px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+/*contact form*/
+.contactForm {
+    background-color: rgb(254, 254, 255);
+    padding: 35px;
+    margin-top: 30px;
+    border: 5px solid rgba(98, 152, 221, 0.235);
+    border-radius: 15px;
+}
+.contactForm label{
+    font-size: 18px;
+    text-align: left;
+    color: rgb(1, 0, 0);
+    font-family: 'Forum';
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.contactForm input, .contactForm textarea {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    background-color: rgba(233, 230, 230, 0.45);
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
+}
+.contactForm textarea {
+    resize: none;
+}
+.contactForm input:focus, .contactForm textarea:focus {
+    outline: none;
+}
+.submit input[type="submit"] {
+    background-color: rgb(14, 4, 89);
+    width: 25%;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the footer */
+.footer-container {
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+.footer-container p, p2 {
+    font-size: 1.1vw;
+    color: #040000;
+}
+.footer-links {
+    margin-top: 7px;
+}
+.footer-links a {
+    display: block;
+    color: #060000;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 1vw;
+    letter-spacing: 5px;
+}
+.footer-links a:hover {
+    color: rgba(0, 187, 255, 0.454);
+}
+/*testimonials styling*/
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    background-color: #8dc0ed26;
+}
+.container .contents-wraper{
+    width: 80%;
+    min-height: inherit;
+    margin: 30px auto;
+    text-align: center;
+}
+.contents-wraper .testRow{
+    width: 100%;
+    min-height: inherit;
+    position: relative;
+    overflow: hidden;
+}
+.testRow .testItem{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.testRow .testItem:not(.active){
+    top: 0;
+    left: -100%;
+}
+.testRow .testItem p{
+    font-size: 1vw;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding: 10px;
+}
+.contents-wraper .indicators{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px;
     cursor: pointer;
 }
-
-.tab-button.active {
-    background-color: #ccc;
+.contents-wraper .indicators .dot{
+    width: 10px;
+    height: 10px;
+    margin: 0px 3px;
+    border: 3px solid #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+.contents-wraper .indicators .active{
+    background-color: #006994;
+}
+@keyframes next1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }
 }
 
-.tab-content {
-    display: none; /* Hidden by default */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-top: none;
+@keyframes prev1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
 }
 
-.tab-content.active {
-    display: block; /* Show active tab */
+@media(max-width: 550px){
+    .container .contents-wraper{
+        width: 90%;
+    }
+    .contents-wraper .header h1{
+        font-size: 32px;
+    }
+    .testRow .testItem h3{
+        font-size: 26px;
+    }
+    .testRow .testItem p{
+        font-size: 16px;
+        letter-spacing: initial;
+        line-height: initial;
+    }
 }
