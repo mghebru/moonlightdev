@@ -148,7 +148,7 @@
     padding: 5px;
     text-align: center;
     background-color: #6da8e0f6;
-    font-size: 1.5vw;
+    font-size: 15px;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -211,7 +211,7 @@
 /*tab3 images*/
 #tab3content img {
     width: 100%;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 /*tab4 images*/
 #tab4content img {
@@ -220,7 +220,7 @@
 }
 /*tab5 images*/
 .flutekid1, img {
-    width:100%;
+    width: 100%;
     padding-top: 30px;
 }
 
