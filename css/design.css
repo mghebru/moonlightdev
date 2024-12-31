@@ -32,6 +32,7 @@
     font-size: 6.5vw;
     font-family: "Amita", serif;
     font-weight: 600;
+    margin-top: 20px;
 }
 .hero-text p {
     color: rgb(254, 250, 250);
@@ -138,7 +139,7 @@
 .lessonstab-links {
     display: flex;
     justify-content: space-between; 
-    width: 70%;
+    width: 65%;
     padding: 0;
     margin: 0;
 }
@@ -151,8 +152,8 @@
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .tab:hover {
     background-color: #e4ec6867;
@@ -166,11 +167,11 @@
 .tab-content {
     padding: 30px 16px;
     background-color: rgb(255, 255, 255);
-    position: relative;
-    z-index: -1;
+    display: flex;
+    justify-content: space-between;
     color: #050000;
     border: 2px solid rgb(11, 0, 0);
-    width: 70%;
+    width: 65%;
 }
 /*tabs title*/
 #tab2content h2, #tab5content h2, #tab3content h2, #tab4content h2 {
@@ -178,52 +179,48 @@
     font-family: 'Forum';
     font-size: 35px;
 }
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if there's not enough space */
+    gap: 20px; /* Adds space between items */
+    justify-content: space-around; /* Ensures items are evenly distributed */
+}
 /* Style for the first image and text pair */
 .image2, .image4 {
-    display: flex;
-    flex-direction: row; /* Image on the left, text on the right */
-    align-items: center; /* Vertically center the text with the image */
-    gap: 60px;
+    width: 35%;
+    background-color: rgb(253, 252, 252);
+    margin-bottom: 25px;
 }
 /* Style for the second image and text pair */
 .image3, .image5 {
-    display: flex;
-    flex-direction: row-reverse; /* Image on the right, text on the left */
-    align-items: center; /* Vertically center the text with the image */
-    gap: 60px;
-}
-.pianokid1 {
     width: 35%;
-    height: auto;
-    display: flex;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 30px;
+    background-color: white;
+    margin-bottom: 25px;
 }
 .instrument_desc, .instrument_desc2 {
     font-family: 'Forum';
-    width: 50%;
-    text-align: justify; /* Justify the text to align both left and right edges */
-    margin: 0;            /* Remove any default margins */
-    padding: 0;           /* Remove any default padding */
-    text-indent: 0;
+    font-size: 1.5vw;
+    width: 100%;
+    text-align: justify;  
+    padding: 10px 10px;           
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #tab2content img {
-    width: 35%;
+    width: 100%;
 }
 /*tab3 images*/
 #tab3content img {
-    width: 35%;
-    padding-top: 10px;
+    width: 100%;
+    padding-top: 30px;
 }
 /*tab4 images*/
 #tab4content img {
-    width: 35%;
+    width: 100%;
     padding-top: 30px;
 }
 /*tab5 images*/
 .flutekid1, img {
-    width: 35%;
+    width:100%;
     padding-top: 30px;
 }
 
@@ -238,7 +235,7 @@
     display: flex;
     margin-bottom: 20px;
     gap: 30px;
-    width: 70%;
+    width: 90%;
     margin: 15px auto;
 }
 /*card layout*/
@@ -264,12 +261,13 @@
 }
 .nameTag {
     text-align: center;
-    font-size: 13px;
+    font-size: 1.5vw;
 }
 .nameTag p {
     font-size: 15px;
 }
 .specialeffect {
+    font-size: 1.5vw;
     border: 1px solid black;
     border-radius: 10px;
     opacity: 0;
@@ -330,14 +328,13 @@
     margin-top: 30px;
 }
 .ourContactInfocontainer {
-    width: 85%;
     display: flex;
     justify-content: center;
-    letter-spacing: 1.3px;
     margin: 0 auto;
 }
 .info-item, .info-itemaddress {
-    gap: 25px;
+    padding: 20px;
+    gap: 20px;
     width: 100%;
     font-family: 'Forum';
     display: flex;
@@ -377,15 +374,18 @@
     border-radius: 50%;
 }
 .map {
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+    width: 100%;
 }
 /*contact form*/
 .contactForm {
-    background-color: rgb(254, 254, 255);
-    padding: 35px;
+    width: 95%;
+    margin: 15px;
+    padding: 20px;
     margin-top: 30px;
     border: 5px solid rgba(98, 152, 221, 0.235);
     border-radius: 15px;
@@ -438,7 +438,7 @@
     text-align: center;
 }
 .footer-container p, p2 {
-    font-size: 1.1vw;
+    font-size: 15px;
     color: #040000;
 }
 .footer-links {
@@ -449,7 +449,7 @@
     color: #060000;
     text-decoration: none;
     margin: 5px 0;
-    font-size: 1vw;
+    font-size: 15px;
     letter-spacing: 5px;
 }
 .footer-links a:hover {
@@ -459,7 +459,7 @@
 .container{
     position: relative;
     width: 100%;
-    min-height: 150px;
+    min-height: 250px;
     background-color: #8dc0ed26;
 }
 .container .contents-wraper{
