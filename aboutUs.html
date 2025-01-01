@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Forum&display=swap" rel="stylesheet">
-    <link rel="text" href="navbar/navbar.html">
-    <link rel="stylesheet" href="navbar/stylingnavbar.css">
+    <link rel="text" href="navbar.html">
+    <link rel="stylesheet" href="stylingnavbar.css">
 </head>
 <body>
     <header id="navbar-container" class="navbar-container">
@@ -128,7 +128,7 @@
       <div class="contents-wraper">
     
         <section class="testRow">
-    
+          
           <div class="testItem active">
             <p>My daughter has been taking piano lessons at Moonlight Music School for several months. Her teacher, Anna, is 
               really passionate, patient, and professional. My daughter enjoys going to music class. I also really appreciate
@@ -290,7 +290,7 @@
  <!-- JavaScript to include navbar -->
  <script>
     // Fetch the navbar HTML and insert it into the header
-    fetch('navbar/navbar.html')
+    fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;

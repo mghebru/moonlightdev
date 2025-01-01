@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Arsenal+SC:ital,
 wght@0,400;0,700;1,400;1,700&family=Forum&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="navbar/stylingnavbar.css">
-    <link rel="" href="js/functions.js">
+    <link rel="stylesheet" href="stylingnavbar.css">
+    <link rel="" href="functions.js">
 </head>
 <body>
   <header id="homenavbar-container">
@@ -264,7 +264,7 @@ wght@0,400;0,700;1,400;1,700&family=Forum&family=Libre+Caslon+Display&display=sw
     <!-- JavaScript to include navbar -->
     <script>
         // Fetch the navbar HTML and insert it into the header
-        fetch('navbar/navbar.html')
+        fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('homenavbar-container').innerHTML = data;
