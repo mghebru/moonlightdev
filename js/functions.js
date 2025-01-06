@@ -27,9 +27,6 @@ function openTab(evt, tabName) {
     tab.addEventListener('click', () => openTab(index));
   });
 
-  
-  //*break*//
-
 
 
 
