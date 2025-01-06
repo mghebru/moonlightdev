@@ -16,9 +16,9 @@
 .heropic{
     width: 100%;
 }
-.hero-text {
+.hero-text h1{
     position: absolute;
-    top: 0%;  /* Position the overlay at the top */
+    top: 2%;  /* Position the overlay at the top */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     text-align: center;
@@ -28,35 +28,33 @@
     padding: 0 30px;
 }
 .hero-text h1 {
-    color: rgb(255, 255, 255);
-    font-size: 6.5vw;
-    font-family: "Amita", serif;
+    color: rgb(24, 77, 150);
+    font-size: 6vw;
+    font-family: "Forum", serif;
     font-weight: 600;
     margin-top: 20px;
 }
 .hero-text p {
-    color: rgb(254, 250, 250);
-    background-color: rgba(7, 6, 6, 0.356); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 2vw;
-    font-size: 2vw;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    border-radius: 1px;
+    font-size: 23px;
     font-family:"Forum", serif;
     letter-spacing: 1px;
     width: 100%;
-    font-weight: bold;
 }
 .firstLesson {
-    padding: 10px 10px;
-    background-color: #043462;
-    color: rgb(141, 177, 226);
-    border: none;
-    border-radius: 5px;
+    background-color: #d5ce0874;
+    color: rgb(1, 8, 18);
     cursor: pointer;
-    font-size: 3vw;
+    font-size: 30px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
 }
 .firstLesson:hover {
-    background-color: #e3ddb5;
+    background-color: #2b86c3;
 }
 .gallery {
     display: flex;
@@ -73,12 +71,16 @@
     opacity: 0.5;
 }
 .desc {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     font-family: 'Forum';
+    font-size: 2vw;
+}
+.maindesc {
+    font-weight: 900;
 }
 .responsive {
-    padding: 0 20px;
+    padding: 0 15px;
     align-items: center;
     float: left;
     width: 25%;
@@ -87,34 +89,43 @@
   color: rgb(1, 0, 0);
   font-family: 'Forum';
   text-align: justify; 
-  font-size: 1.5vw; /* Justify the text to align both left and right edges */
+  font-size: 1.6vw; /* Justify the text to align both left and right edges */
   margin-bottom: 0;            /* Remove any default margins */
   padding: 0;           /* Remove any default padding */
   text-indent: 0;
 
 }
-@media only screen and (max-width: 100px) {
+.secondesc {
+    color: #0a2954;
+    padding: 50px;
+    font-size: 2vw;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: 'Forum';  
+}
+
+@media only screen and (max-width: 750px) {
     .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
-    .moonbutton img {
-        width: 40px;  /* Smaller size on tablets */
+        width: 49%;
     }
     .moonbutton img {
         width: 30px;  /* Even smaller on mobile */
     }
-}
-.secondesc p {
-    margin-top: 60vw;
-    font-size: 1.6vw;
-    margin-bottom: 0;            /* Remove any default margins */
-    padding: 10vw;           /* Remove any default padding */
-    text-indent: 0;
-    text-align: justify;
-    letter-spacing: 1.5px;
-    font-family: 'Forum';
-    
+    .desc{
+        font-size: 15px;
+    }
+    .desc p{
+        font-size: 13px;
+    }
+    .secondesc {
+        font-size: 13px;
+    }
+    .hero-text p {
+        font-size: 18px;
+    }
+    .firstLesson {
+        font-size: 20px;
+    }
 }
 
 /*lessons page styling*/
@@ -184,6 +195,7 @@
     flex-wrap: wrap; /* Allows wrapping to the next line if there's not enough space */
     gap: 20px; /* Adds space between items */
     justify-content: space-around; /* Ensures items are evenly distributed */
+    
 }
 /* Style for the first image and text pair */
 .image2, .image4 {
@@ -203,7 +215,7 @@
     width: 100%;
     text-align: justify;  
     padding: 10px 10px;           
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(243, 243, 181, 0.171);
 }
 #tab2content img {
     width: 100%;
@@ -223,7 +235,27 @@
     width: 100%;
     padding-top: 30px;
 }
-
+@media only screen and (max-width: 750px) {
+    .image2, .image4 {
+        width: 95%;
+        background-color: rgb(253, 252, 252);
+        margin-bottom: 5px;
+    }
+    .image3, .image5 {
+        width: 95%;
+        background-color: white;
+        margin-bottom: 5px;
+    }
+    .instrument_desc, .instrument_desc2 {
+        font-size: 15px;
+    }
+    .lessonstab-links {
+        width: 90%;
+    }
+    .tab-content{
+        width: 90%;
+    }
+}
 
 /*about us page styling*/
 .aboutUsMain h1 {
@@ -252,8 +284,9 @@
     flex: 1; /* Ensures the text container takes up remaining space */
 }
 .profile-image {
-    width: 50%; /* Image size */
-    height: auto;
+    width: 250px; /* Image size */
+    height: 300px;
+    object-fit: cover;
     padding: 5px;
     border-radius: 50%;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -261,19 +294,22 @@
 }
 .nameTag {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 15px;
 }
 .nameTag p {
     font-size: 15px;
 }
 .specialeffect {
-    font-size: 1.5vw;
-    border: 1px solid black;
+    font-size: 20px;
     border-radius: 10px;
     opacity: 0;
     position: relative;
     padding: 10px;
     animation: fadeIn 5s ease-out forwards;
+    text-align: justify;  /* Justify the text to align both left and right edges */
+    margin-bottom: 0;            /* Remove any default margins */
+    padding: 0;           /* Remove any default padding */
+    text-indent: 0;
 }
 @keyframes fadeIn {
     0% {
@@ -284,23 +320,30 @@
       opacity: 1; /* Text is fully visible */
     }
   }
-
+  @media only screen and (max-width: 750px) {
+    .profile-row {
+        flex-direction: column; /* Stack the info cards vertically */
+      }
+    .specialeffect {
+        font-size: 20px;
+    }
+}
 
 /*policies page styling*/
 .policies {
     max-width: 800px;
     margin: 0 auto; /*center container*/
-    padding: 20px;
+    padding: 5px;
 }
 .policies h1 {
     font-family: 'Forum';
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .policy-item{
     display: flex;
     align-items: flex-start;
-    padding: 15px;
+    padding: 10px;
     box-sizing: border-box;
 }
 .policy-item:nth-child(2n) {
@@ -309,12 +352,50 @@
 .policy-item p {
     font-family: 'Forum';
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     border-radius: 9px;
 }
+.policy-prices {
+    text-align: center;
+  }
+.fee-name, .fee-price {
+    display: table-cell;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+}
+.fee-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.fee-name {
+    width: 200px;
+}
+.fee-price {
+    text-align: right;
+    font-weight: bold; /* Optional, to emphasize the price */
+}
+.fee-list {
+    font-size: 18px; /* Optional styling for the "Fees and Payments" title */
+    margin-bottom: 20px;
+}
+.fee-table  {
+    display: table;
+    margin: 0 auto;
+}
+.fee-row {
+    display: table-row;
+}
+.policy-prices  p {
+    margin: 0px 0; /* Adds space between each item */
+  }
 
 /*contact us page styling*/
+.contactUs {
+    background-color: #ba9f502e;
+}
 .contactheader {
     text-align: center;
     font-size: 24px;
@@ -367,7 +448,7 @@
     text-align: center;
     text-decoration: none;
     margin: 5px 5px;
-    background-color: black;
+    background-color: rgb(13, 0, 0);
     color: white;
     border-radius: 50%;
 }
@@ -378,6 +459,15 @@
     align-items: center;
     margin-top: 25px;
     width: 100%;
+}
+@media only screen and (max-width: 750px) {
+    .info-item {
+        flex-direction: column; /* Stack vertically */
+        text-align: center;
+      }
+      .contactUs {
+        background-color: white;
+      }
 }
 /*contact form*/
 .contactForm {
@@ -453,6 +543,7 @@
 .footer-links a:hover {
     color: rgba(0, 187, 255, 0.454);
 }
+
 /*testimonials styling*/
 .container{
     position: relative;
