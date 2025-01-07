@@ -60,7 +60,8 @@
         </div>
 
         <div class="contactForm">
-            <form name="contact" netflify>
+
+            <form method="POST" data-netlify="true">
                 <div class="input">
                     <div class="input-row">
                         <div class="input-item">
@@ -228,7 +229,7 @@
                 indicators();
             }
             function autoSliding(){
-                deleteInterval = setInterval(timer, 2000);
+                deleteInterval = setInterval(timer, 6000);
                 function timer(){
                 slideNext();
                 indicators();
