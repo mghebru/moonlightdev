@@ -27,7 +27,7 @@
     color: rgb(224, 182, 13); /* Text color for the tabs */
     font-size: 25px;
     padding: 16px 16px;
-    background-color: #184168f6; /* Semi-translucent background */
+    background-color: #0a2954; /* Semi-translucent background */
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: bold; /* Bold text */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
