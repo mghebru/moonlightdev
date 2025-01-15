@@ -334,16 +334,16 @@
 
 /*policies page styling*/
 .policies {
-    background-color: rgba(255, 255, 255, 0.74);
     border-radius: 10px;
     max-width: 800px;
     margin: 0 auto;
-    padding: 5px;
+    padding: 15px;
 }
 .policies h1 {
     font-family: 'Forum';
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .policy-item{
     display: flex;
@@ -363,6 +363,8 @@
 }
 .policy-prices {
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.508);
+    border-radius: 10px;
   }
 .fee-name, .fee-price {
     display: table-cell;
@@ -376,15 +378,15 @@
     margin-top: 5px;
 }
 .fee-name {
-    width: 200px;
+    width: 300px;
 }
 .fee-price {
     text-align: right;
     font-weight: bold; /* Optional, to emphasize the price */
 }
-.fee-list {
-    font-size: 18px; /* Optional styling for the "Fees and Payments" title */
-    margin-bottom: 20px;
+.fee-list{
+    font-size: 23px; /* Optional styling for the "Fees and Payments" title */
+    padding-bottom: 10px;
 }
 .fee-table  {
     display: table;
@@ -428,7 +430,7 @@
 }
 .info-item, .info-itemaddress {
     padding: 20px;
-    gap: 20px;
+    gap: 70px;
     width: 100%;
     font-family: 'Forum';
     display: flex;
@@ -453,8 +455,8 @@
 .info-item p, .info-itemaddress p {
     color: rgb(2, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 17px;
-    margin-top: 13px;
+    font-size: 19px;
+    margin-top: 23px;
     align-items: left;
     justify-content: left;
 }
@@ -485,6 +487,8 @@
     align-items: center; 
 }
 .contactForm {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffffc8;
     width: 55%;
     margin: 15px;
@@ -497,6 +501,10 @@
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.642);
     border-radius: 10px;
+    width: 60%;
+}
+.map {
+    width: 100%;
 }
 .contactForm label{
     font-size: 18px;
@@ -571,6 +579,12 @@
       }
       .background-container {
         background-color: rgb(255, 255, 255);
+    }
+    .info-item, .info-itemaddress {
+        gap: 20px;
+    }
+    .info-item p, .info-itemaddress p {
+        font-size: 16px;
     }
 }
 /*testimonials styling*/
