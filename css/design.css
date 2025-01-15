@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navbar-container .moonbutton img {
+.navbar-container .moonpic img {
     display: none;
 }
 .hero-container {
@@ -15,6 +15,7 @@
 }
 .heropic{
     width: 100%;
+    padding: 0;
 }
 .hero-text h1{
     position: absolute;
@@ -28,7 +29,7 @@
     padding: 0 30px;
 }
 .hero-text h1 {
-    color: rgb(24, 77, 150);
+    color: rgb(255, 255, 255);
     font-size: 6vw;
     font-family: "Forum", serif;
     font-weight: 600;
@@ -45,7 +46,7 @@
     width: 100%;
 }
 .firstLesson {
-    background-color: #d5ce0874;
+    background-color: #efe821b1;
     color: rgb(1, 8, 18);
     cursor: pointer;
     font-size: 30px;
@@ -60,7 +61,7 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    border: 3px solid #d5ce0874;  
+    border: 3px solid #efe821b1;  
 }
 .gallery img {
     width: 100%;
@@ -106,7 +107,7 @@
 
 @media only screen and (max-width: 750px) {
     .responsive {
-        width: 49%;
+        width: 50%;
     }
     .moonbutton img {
         width: 30px;  /* Even smaller on mobile */
@@ -142,7 +143,6 @@
 .lessonstabs {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     width: 100%;
     border-radius: 10px;
     align-items: center;
@@ -155,6 +155,7 @@
     margin: 0;
 }
 .tab {
+    margin-top: 30px;
     flex: 1;
     padding: 5px;
     text-align: center;
@@ -236,6 +237,9 @@
     padding-top: 30px;
 }
 @media only screen and (max-width: 750px) {
+    .background-container {
+        background-color: white;
+    }
     .image2, .image4 {
         width: 95%;
         background-color: rgb(253, 252, 252);
@@ -259,6 +263,7 @@
 
 /*about us page styling*/
 .aboutUsMain h1 {
+    margin-top: 15px;
     text-align: center;
     font-family: 'Forum';
     margin-bottom: 10px;
@@ -331,8 +336,10 @@
 
 /*policies page styling*/
 .policies {
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 10px;
     max-width: 800px;
-    margin: 0 auto; /*center container*/
+    margin: 0 auto;
     padding: 5px;
 }
 .policies h1 {
@@ -394,9 +401,19 @@
 
 /*contact us page styling*/
 .contactUs {
-    background-color: #acc0ca2e;
+    background-color: #ced3d6a7;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.background-container {
+    width: 90%;
+    margin: 0 auto;
+   background-color: #549ce486;
+   border-radius: 30px;
 }
 .contactheader {
+    padding: 15px;
     text-align: center;
     font-size: 24px;
     font-family: 'Forum';
@@ -433,6 +450,7 @@
     font-size: 25px;
     margin-top: 20px;
     gap: 100px;
+    text-align: center;
 }
 .info-item p, .info-itemaddress p {
     color: rgb(2, 0, 0);
@@ -459,25 +477,28 @@
     align-items: center;
     margin-top: 25px;
     width: 100%;
+    height: auto;
 }
-@media only screen and (max-width: 750px) {
-    .info-item {
-        flex-direction: column; /* Stack vertically */
-        text-align: center;
-      }
-      .contactUs {
-        background-color: white;
-      }
-}
+
 /*contact form*/
+.ourContactInfocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
 .contactForm {
     background-color: #ffffffc8;
-    width: 95%;
+    width: 55%;
     margin: 15px;
     padding: 20px;
     margin-top: 30px;
     border: 5px solid rgba(98, 152, 221, 0.235);
     border-radius: 15px;
+}
+.contact-info {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.642);
+    border-radius: 10px;
 }
 .contactForm label{
     font-size: 18px;
@@ -485,15 +506,10 @@
     color: rgb(1, 0, 0);
     font-family: 'Forum';
 }
-.input {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 .input-row {
     display: flex;
-    gap: 10px;
     justify-content: space-between;
+    
 }
 .contactForm input, .contactForm textarea {
     width: 90%;
@@ -544,13 +560,24 @@
 .footer-links a:hover {
     color: rgba(0, 187, 255, 0.454);
 }
-
+@media only screen and (max-width: 750px) {
+    .info-item {
+        flex-direction: column; /* Stack vertically */
+        text-align: center;
+      }
+      .contactUs {
+        background-color: white;
+      }
+      .contactForm {
+        width: 90%;
+      }
+}
 /*testimonials styling*/
 .container{
     position: relative;
     width: 100%;
     min-height: 250px;
-    background-color: #8dc0ed26;
+    background-color: #ffffffbc;
 }
 .container .contents-wraper{
     width: 80%;
