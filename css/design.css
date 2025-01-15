@@ -19,7 +19,7 @@
 }
 .hero-text h1{
     position: absolute;
-    top: 2%;  /* Position the overlay at the top */
+    top: 0%;  /* Position the overlay at the top */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     text-align: center;
@@ -159,20 +159,17 @@
     flex: 1;
     padding: 5px;
     text-align: center;
-    background-color: #6da8e0f6;
+    background-color: #fbfcfdf6;
     font-size: 15px;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.tab:hover {
-    background-color: #e4ec6867;
-}
 /* Active tab */
 .tab.active {
-    background-color: #021d3a;
+    background-color: #f1c70b;
     color: rgb(251, 251, 249);
 }
 /* Tab content */
@@ -237,8 +234,9 @@
     padding-top: 30px;
 }
 @media only screen and (max-width: 750px) {
-    .background-container {
-        background-color: white;
+    .tab{
+        background-color: #0a2954;
+        color: white;
     }
     .image2, .image4 {
         width: 95%;
@@ -409,7 +407,7 @@
 .background-container {
     width: 90%;
     margin: 0 auto;
-   background-color: #549ce486;
+   background-color: #007bf51e;
    border-radius: 30px;
 }
 .contactheader {
@@ -571,6 +569,9 @@
       .contactForm {
         width: 90%;
       }
+      .background-container {
+        background-color: rgb(255, 255, 255);
+    }
 }
 /*testimonials styling*/
 .container{
